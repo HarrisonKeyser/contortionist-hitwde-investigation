@@ -1,0 +1,437 @@
+====================================================================================================
+A. Achievement unlock site: per player, if AllWallsPassed() then Unlock(206 'Contortionist'). (vtable slot 12 of the 4 game-mode classes)
+====================================================================================================
+821b8c10: 7d8802a6  mflr     r12
+821b8c14: 485085d9  bl       0x826c11ec
+821b8c18: 9421ff70  stwu     r1, -0x90(r1)
+821b8c1c: 4bfe49b5  bl       0x8219d5d0
+821b8c20: 83c30004  lwz      r30, 4(r3)
+821b8c24: a39e0008  lhz      r28, 8(r30)
+821b8c28: 281c0000  cmplwi   r28, 0
+821b8c2c: 4182011c  beq      0x821b8d48
+821b8c30: 3ba00000  li       r29, 0
+821b8c34: 397d0003  addi     r11, r29, 3
+821b8c38: 557f103a  slwi     r31, r11, 2
+821b8c3c: 7c7ff02e  lwzx     r3, r31, r30
+821b8c40: 2f030000  cmpwi    cr6, r3, 0
+821b8c44: 419a00f0  beq      cr6, 0x821b8d34
+821b8c48: 4801bf89  bl       0x821d4bd0
+821b8c4c: 7c7ff02e  lwzx     r3, r31, r30
+821b8c50: 4801bf81  bl       0x821d4bd0
+821b8c54: 2b030004  cmplwi   cr6, r3, 4
+821b8c58: 409800dc  bge      cr6, 0x821b8d34
+821b8c5c: 4bff4b55  bl       0x821ad7b0
+821b8c60: 48002229  bl       0x821bae88
+821b8c64: 4800304d  bl       0x821bbcb0
+821b8c68: 7c7b1b78  mr       r27, r3
+821b8c6c: 4bfbe985  bl       0x821775f0
+821b8c70: 7c6b1b78  mr       r11, r3
+821b8c74: 7c7ff02e  lwzx     r3, r31, r30
+821b8c78: 834b001c  lwz      r26, 0x1c(r11)
+821b8c7c: 4801bf55  bl       0x821d4bd0
+821b8c80: 7c791b78  mr       r25, r3
+821b8c84: 4bfe4b05  bl       0x8219d788
+821b8c88: 7f24cb78  mr       r4, r25
+821b8c8c: 5765063e  clrlwi   r5, r27, 0x18
+821b8c90: 7f46d378  mr       r6, r26
+821b8c94: 4bffb5ad  bl       0x821b4240
+821b8c98: 4bfbe959  bl       0x821775f0
+821b8c9c: 8163001c  lwz      r11, 0x1c(r3)
+821b8ca0: 2b0b0005  cmplwi   cr6, r11, 5
+821b8ca4: 409a0054  bne      cr6, 0x821b8cf8
+821b8ca8: 4bff4b09  bl       0x821ad7b0
+821b8cac: 480022a5  bl       0x821baf50
+821b8cb0: 2f030003  cmpwi    cr6, r3, 3
+821b8cb4: 409a0044  bne      cr6, 0x821b8cf8
+821b8cb8: 4bff4af9  bl       0x821ad7b0
+821b8cbc: 480021c5  bl       0x821bae80
+821b8cc0: 2f030001  cmpwi    cr6, r3, 1
+821b8cc4: 409a0034  bne      cr6, 0x821b8cf8
+821b8cc8: 4bfe4909  bl       0x8219d5d0
+821b8ccc: 81630008  lwz      r11, 8(r3)
+821b8cd0: a16b0008  lhz      r11, 8(r11)
+821b8cd4: 2b0b0002  cmplwi   cr6, r11, 2
+821b8cd8: 409a0020  bne      cr6, 0x821b8cf8
+821b8cdc: 7c7ff02e  lwzx     r3, r31, r30
+821b8ce0: 4801bef1  bl       0x821d4bd0
+821b8ce4: 7c7b1b78  mr       r27, r3
+821b8ce8: 4bfe4af9  bl       0x8219d7e0
+821b8cec: 388000ea  li       r4, 0xea
+821b8cf0: 7f65db78  mr       r5, r27
+821b8cf4: 4801397d  bl       0x821cc670
+821b8cf8: 7c7ff02e  lwzx     r3, r31, r30
+821b8cfc: 4801bed5  bl       0x821d4bd0
+821b8d00: 7c7b1b78  mr       r27, r3
+821b8d04: 4bfe4a85  bl       0x8219d788
+821b8d08: 7f64db78  mr       r4, r27
+821b8d0c: 4bffb55d  bl       0x821b4268
+821b8d10: 2c030000  cmpwi    r3, 0
+821b8d14: 41820020  beq      0x821b8d34
+821b8d18: 7c7ff02e  lwzx     r3, r31, r30
+821b8d1c: 4801beb5  bl       0x821d4bd0
+821b8d20: 7c7f1b78  mr       r31, r3
+821b8d24: 4bfe4abd  bl       0x8219d7e0
+821b8d28: 388000ce  li       r4, 0xce
+821b8d2c: 7fe5fb78  mr       r5, r31
+821b8d30: 48013941  bl       0x821cc670
+821b8d34: 397d0001  addi     r11, r29, 1
+821b8d38: 556b043e  clrlwi   r11, r11, 0x10
+821b8d3c: 7d7d5b78  mr       r29, r11
+821b8d40: 7f0be040  cmplw    cr6, r11, r28
+821b8d44: 4198fef0  blt      cr6, 0x821b8c34
+821b8d48: 4bfdae79  bl       0x82193bc0
+821b8d4c: 4bffd04d  bl       0x821b5d98
+821b8d50: 38210090  addi     r1, r1, 0x90
+821b8d54: 485084e8  b        0x826c123c
+
+====================================================================================================
+B. AllWallsPassed(player) -> per-profile struct (0x610 bytes each)
+====================================================================================================
+821b4268: 2b040004  cmplwi   cr6, r4, 4
+821b426c: 40980010  bge      cr6, 0x821b427c
+821b4270: 1d640610  mulli    r11, r4, 0x610
+821b4274: 7c6b1a14  add      r3, r11, r3
+821b4278: 4bffec80  b        0x821b2ef8
+821b427c: 38600000  li       r3, 0
+821b4280: 4e800020  blr      
+
+====================================================================================================
+C. The check: 20 themes, counts table @0x8200e930, bitfield @profile+0x1dc, 0x14 bytes per theme
+====================================================================================================
+821b2ef8: fbe1fff8  std      r31, -8(r1)
+821b2efc: 3d608201  lis      r11, -0x7dff
+821b2f00: 39200000  li       r9, 0
+821b2f04: 396be930  addi     r11, r11, -0x16d0
+821b2f08: 388301dc  addi     r4, r3, 0x1dc
+821b2f0c: 7d675b78  mr       r7, r11
+821b2f10: 81070000  lwz      r8, 0(r7)
+821b2f14: 39400000  li       r10, 0
+821b2f18: 7d061e70  srawi    r6, r8, 3
+821b2f1c: 7cc60195  addze.   r6, r6
+821b2f20: 7d051e70  srawi    r5, r8, 3
+821b2f24: 7ca50194  addze    r5, r5
+821b2f28: 54a51838  slwi     r5, r5, 3
+821b2f2c: 7d054050  subf     r8, r5, r8
+821b2f30: 40810020  ble      0x821b2f50
+821b2f34: 7ca44a14  add      r5, r4, r9
+821b2f38: 7fe550ae  lbzx     r31, r5, r10
+821b2f3c: 2b1f00ff  cmplwi   cr6, r31, 0xff
+821b2f40: 409a0058  bne      cr6, 0x821b2f98
+821b2f44: 394a0001  addi     r10, r10, 1
+821b2f48: 7f0a3000  cmpw     cr6, r10, r6
+821b2f4c: 4198ffec  blt      cr6, 0x821b2f38
+821b2f50: 7d495214  add      r10, r9, r10
+821b2f54: 38cb005c  addi     r6, r11, 0x5c
+821b2f58: 7d4a1a14  add      r10, r10, r3
+821b2f5c: 38ab0050  addi     r5, r11, 0x50
+821b2f60: 7cc830ae  lbzx     r6, r8, r6
+821b2f64: 894a01dc  lbz      r10, 0x1dc(r10)
+821b2f68: 7d0828ae  lbzx     r8, r8, r5
+821b2f6c: 7d4a3038  and      r10, r10, r6
+821b2f70: 7f0a4040  cmplw    cr6, r10, r8
+821b2f74: 409a0024  bne      cr6, 0x821b2f98
+821b2f78: 38e70004  addi     r7, r7, 4
+821b2f7c: 394b0050  addi     r10, r11, 0x50
+821b2f80: 39290014  addi     r9, r9, 0x14
+821b2f84: 7f075000  cmpw     cr6, r7, r10
+821b2f88: 4198ff88  blt      cr6, 0x821b2f10
+821b2f8c: 38600001  li       r3, 1
+821b2f90: ebe1fff8  ld       r31, -8(r1)
+821b2f94: 4e800020  blr      
+821b2f98: 38600000  li       r3, 0
+821b2f9c: 4bfffff4  b        0x821b2f90
+
+====================================================================================================
+D. RecordWallPassed(player, wallIdx, theme) -> SetBit
+====================================================================================================
+821b4240: 7c8b2378  mr       r11, r4
+821b4244: 7ca42b78  mr       r4, r5
+821b4248: 2b0b0004  cmplwi   cr6, r11, 4
+821b424c: 4c980020  bgelr    cr6
+821b4250: 1d6b0610  mulli    r11, r11, 0x610
+821b4254: 7cc53378  mr       r5, r6
+821b4258: 7c6b1a14  add      r3, r11, r3
+821b425c: 4bffec54  b        0x821b2eb0
+821b4260: 4e800020  blr      
+
+====================================================================================================
+E. SetBit: profile[0x1dc + theme*0x14 + idx/8] |= 1<<(idx%8)
+====================================================================================================
+821b2eb0: 5489063e  clrlwi   r9, r4, 0x18
+821b2eb4: 1d450014  mulli    r10, r5, 0x14
+821b2eb8: 7d281e70  srawi    r8, r9, 3
+821b2ebc: 548beefe  rlwinm   r11, r4, 0x1d, 0x1b, 0x1f
+821b2ec0: 7d080194  addze    r8, r8
+821b2ec4: 7d6a5a14  add      r11, r10, r11
+821b2ec8: 550a1838  slwi     r10, r8, 3
+821b2ecc: 7d6b1a14  add      r11, r11, r3
+821b2ed0: 7d4a4850  subf     r10, r10, r9
+821b2ed4: 39200001  li       r9, 1
+821b2ed8: 5548063e  clrlwi   r8, r10, 0x18
+821b2edc: 394b01dc  addi     r10, r11, 0x1dc
+821b2ee0: 894b01dc  lbz      r10, 0x1dc(r11)
+821b2ee4: 7d294030  slw      r9, r9, r8
+821b2ee8: 7d2a5378  or       r10, r9, r10
+821b2eec: 994b01dc  stb      r10, 0x1dc(r11)
+821b2ef0: 4e800020  blr      
+
+====================================================================================================
+F. Wall::GetIndex() = wall->0x58
+====================================================================================================
+821bbcb0: 80630058  lwz      r3, 0x58(r3)
+821bbcb4: 4e800020  blr      
+
+====================================================================================================
+G. Theme loader: Wave01-04, then Wave06-09, threading a running wall total (r6) into each wave load
+====================================================================================================
+821bb280: 7d8802a6  mflr     r12
+821bb284: 48505f79  bl       0x826c11fc
+821bb288: 9421ff90  stwu     r1, -0x70(r1)
+821bb28c: 7c7f1b78  mr       r31, r3
+821bb290: 7c9e2378  mr       r30, r4
+821bb294: 3ba00004  li       r29, 4
+821bb298: 7c8b2378  mr       r11, r4
+821bb29c: 7d441850  subf     r10, r4, r3
+821bb2a0: 892b0000  lbz      r9, 0(r11)
+821bb2a4: 7d280775  extsb.   r8, r9
+821bb2a8: 7d2a59ae  stbx     r9, r10, r11
+821bb2ac: 396b0001  addi     r11, r11, 1
+821bb2b0: 4082fff0  bne      0x821bb2a0
+821bb2b4: 7fe4fb78  mr       r4, r31
+821bb2b8: 7fe3fb78  mr       r3, r31
+821bb2bc: 4bfffb5d  bl       0x821bae18
+821bb2c0: 2f030014  cmpwi    cr6, r3, 0x14
+821bb2c4: 41980008  blt      cr6, 0x821bb2cc
+821bb2c8: 3ba00001  li       r29, 1
+821bb2cc: 38c00000  li       r6, 0
+821bb2d0: 7fa5eb78  mr       r5, r29
+821bb2d4: 7fc4f378  mr       r4, r30
+821bb2d8: 7fe3fb78  mr       r3, r31
+821bb2dc: 4bfffd0d  bl       0x821bafe8
+821bb2e0: 7c661b78  mr       r6, r3
+821bb2e4: 7fa5eb78  mr       r5, r29
+821bb2e8: 7fc4f378  mr       r4, r30
+821bb2ec: 7fe3fb78  mr       r3, r31
+821bb2f0: 4bfffd91  bl       0x821bb080
+821bb2f4: 38800000  li       r4, 0
+821bb2f8: 7fe3fb78  mr       r3, r31
+821bb2fc: 4bffff05  bl       0x821bb200
+821bb300: 39600001  li       r11, 1
+821bb304: 997f0dac  stb      r11, 0xdac(r31)
+821bb308: 38210070  addi     r1, r1, 0x70
+821bb30c: 48505f40  b        0x826c124c
+
+====================================================================================================
+H. Load Wave01..04: r29 starts at offset arg, r29 += round->count after each wave, passed as r5 to LoadWave
+====================================================================================================
+821bafe8: 7d8802a6  mflr     r12
+821bafec: 48506201  bl       0x826c11ec
+821baff0: 9421fe30  stwu     r1, -0x1d0(r1)
+821baff4: 7c992378  mr       r25, r4
+821baff8: 7cba2b78  mr       r26, r5
+821baffc: 7cdd3378  mr       r29, r6
+821bb000: 39600000  li       r11, 0
+821bb004: 2f050000  cmpwi    cr6, r5, 0
+821bb008: 4099006c  ble      cr6, 0x821bb074
+821bb00c: 3d208201  lis      r9, -0x7dff
+821bb010: 3d408201  lis      r10, -0x7dff
+821bb014: 3bc30080  addi     r30, r3, 0x80
+821bb018: 3b89f3ac  addi     r28, r9, -0xc54
+821bb01c: 3b6af3a0  addi     r27, r10, -0xc60
+821bb020: 3beb0001  addi     r31, r11, 1
+821bb024: 7f64db78  mr       r4, r27
+821bb028: 7fe5fb78  mr       r5, r31
+821bb02c: 38610050  addi     r3, r1, 0x50
+821bb030: 48506241  bl       0x826c1270
+821bb034: 7f84e378  mr       r4, r28
+821bb038: 38c10050  addi     r6, r1, 0x50
+821bb03c: 7f25cb78  mr       r5, r25
+821bb040: 38610090  addi     r3, r1, 0x90
+821bb044: 4850622d  bl       0x826c1270
+821bb048: 7fa5eb78  mr       r5, r29
+821bb04c: 38810090  addi     r4, r1, 0x90
+821bb050: 7fc3f378  mr       r3, r30
+821bb054: 48000a8d  bl       0x821bbae0
+821bb058: 7fc3f378  mr       r3, r30
+821bb05c: 48000c5d  bl       0x821bbcb8
+821bb060: 7fa3ea14  add      r29, r3, r29
+821bb064: 7febfb78  mr       r11, r31
+821bb068: 3bde01a4  addi     r30, r30, 0x1a4
+821bb06c: 7f1fd000  cmpw     cr6, r31, r26
+821bb070: 4198ffb0  blt      cr6, 0x821bb020
+821bb074: 7fa3eb78  mr       r3, r29
+821bb078: 382101d0  addi     r1, r1, 0x1d0
+821bb07c: 485061c0  b        0x826c123c
+
+====================================================================================================
+I. Load Wave06..09: same, starting from the total of waves 1-4
+====================================================================================================
+821bb080: 7d8802a6  mflr     r12
+821bb084: 48506169  bl       0x826c11ec
+821bb088: 9421fe30  stwu     r1, -0x1d0(r1)
+821bb08c: 7c992378  mr       r25, r4
+821bb090: 7cba2b78  mr       r26, r5
+821bb094: 7cdd3378  mr       r29, r6
+821bb098: 3be00000  li       r31, 0
+821bb09c: 2f050000  cmpwi    cr6, r5, 0
+821bb0a0: 40990068  ble      cr6, 0x821bb108
+821bb0a4: 3d408201  lis      r10, -0x7dff
+821bb0a8: 3d608201  lis      r11, -0x7dff
+821bb0ac: 3bc30710  addi     r30, r3, 0x710
+821bb0b0: 3b8af3ac  addi     r28, r10, -0xc54
+821bb0b4: 3b6bf3a0  addi     r27, r11, -0xc60
+821bb0b8: 7f64db78  mr       r4, r27
+821bb0bc: 38bf0006  addi     r5, r31, 6
+821bb0c0: 38610050  addi     r3, r1, 0x50
+821bb0c4: 485061ad  bl       0x826c1270
+821bb0c8: 7f84e378  mr       r4, r28
+821bb0cc: 38c10050  addi     r6, r1, 0x50
+821bb0d0: 7f25cb78  mr       r5, r25
+821bb0d4: 38610090  addi     r3, r1, 0x90
+821bb0d8: 48506199  bl       0x826c1270
+821bb0dc: 7fa5eb78  mr       r5, r29
+821bb0e0: 38810090  addi     r4, r1, 0x90
+821bb0e4: 7fc3f378  mr       r3, r30
+821bb0e8: 480009f9  bl       0x821bbae0
+821bb0ec: 7fc3f378  mr       r3, r30
+821bb0f0: 48000bc9  bl       0x821bbcb8
+821bb0f4: 3bff0001  addi     r31, r31, 1
+821bb0f8: 7fa3ea14  add      r29, r3, r29
+821bb0fc: 3bde01a4  addi     r30, r30, 0x1a4
+821bb100: 7f1fd000  cmpw     cr6, r31, r26
+821bb104: 4198ffb4  blt      cr6, 0x821bb0b8
+821bb108: 382101d0  addi     r1, r1, 0x1d0
+821bb10c: 48506130  b        0x826c123c
+
+====================================================================================================
+J. LoadWave(round, path, offset): r5 (offset) is never read -- it is clobbered by the first call
+====================================================================================================
+821bbae0: 7d8802a6  mflr     r12
+821bbae4: 48505719  bl       0x826c11fc
+821bbae8: e981f000  ld       r12, -0x1000(r1)
+821bbaec: 9421e620  stwu     r1, -0x19e0(r1)
+821bbaf0: 7c7d1b78  mr       r29, r3
+821bbaf4: 38610060  addi     r3, r1, 0x60
+821bbaf8: 7c9f2378  mr       r31, r4
+821bbafc: 48001bad  bl       0x821bd6a8
+821bbb00: 38610180  addi     r3, r1, 0x180
+821bbb04: 4bfd1705  bl       0x8218d208
+821bbb08: 38810060  addi     r4, r1, 0x60
+821bbb0c: 38610180  addi     r3, r1, 0x180
+821bbb10: 4bffde31  bl       0x821b9940
+821bbb14: 39600000  li       r11, 0
+821bbb18: 38810050  addi     r4, r1, 0x50
+821bbb1c: 91610050  stw      r11, 0x50(r1)
+821bbb20: 7fe3fb78  mr       r3, r31
+821bbb24: 4bfbb61d  bl       0x82177140
+821bbb28: 7c641b78  mr       r4, r3
+821bbb2c: 38610180  addi     r3, r1, 0x180
+821bbb30: 80a10050  lwz      r5, 0x50(r1)
+821bbb34: 4bfd28cd  bl       0x8218e400
+821bbb38: 38610060  addi     r3, r1, 0x60
+821bbb3c: 48001b65  bl       0x821bd6a0
+821bbb40: 3d608201  lis      r11, -0x7dff
+821bbb44: 7c7e1b78  mr       r30, r3
+821bbb48: 3bebf414  addi     r31, r11, -0xbec
+821bbb4c: 48453bcd  bl       0x8260f718
+821bbb50: 89630000  lbz      r11, 0(r3)
+821bbb54: 895f0000  lbz      r10, 0(r31)
+821bbb58: 2c0b0000  cmpwi    r11, 0
+821bbb5c: 7d6a5850  subf     r11, r10, r11
+821bbb60: 41820014  beq      0x821bbb74
+821bbb64: 38630001  addi     r3, r3, 1
+821bbb68: 3bff0001  addi     r31, r31, 1
+821bbb6c: 2f0b0000  cmpwi    cr6, r11, 0
+821bbb70: 419affe0  beq      cr6, 0x821bbb50
+821bbb74: 2c0b0000  cmpwi    r11, 0
+821bbb78: 40820010  bne      0x821bbb88
+821bbb7c: 7fc4f378  mr       r4, r30
+821bbb80: 7fa3eb78  mr       r3, r29
+821bbb84: 4bfffe85  bl       0x821bba08
+821bbb88: 38610180  addi     r3, r1, 0x180
+821bbb8c: 48453b8d  bl       0x8260f718
+821bbb90: 38610060  addi     r3, r1, 0x60
+821bbb94: 48001b3d  bl       0x821bd6d0
+821bbb98: 382119e0  addi     r1, r1, 0x19e0
+821bbb9c: 485056b0  b        0x826c124c
+
+====================================================================================================
+K. Parse WALL_LIST: index passed to each wall is the loop counter r31, starting at 0 for every file
+====================================================================================================
+821bba08: 7d8802a6  mflr     r12
+821bba0c: 485057e9  bl       0x826c11f4
+821bba10: 9421ff80  stwu     r1, -0x80(r1)
+821bba14: 3d608201  lis      r11, -0x7dff
+821bba18: 7c7c1b78  mr       r28, r3
+821bba1c: 7c9f2378  mr       r31, r4
+821bba20: 7c832378  mr       r3, r4
+821bba24: 388bf404  addi     r4, r11, -0xbfc
+821bba28: 38a00000  li       r5, 0
+821bba2c: 4800195d  bl       0x821bd388
+821bba30: 907c0198  stw      r3, 0x198(r28)
+821bba34: 3d608201  lis      r11, -0x7dff
+821bba38: 7fe3fb78  mr       r3, r31
+821bba3c: 388bf3f4  addi     r4, r11, -0xc0c
+821bba40: 48001911  bl       0x821bd350
+821bba44: 7c7e1b78  mr       r30, r3
+821bba48: 4bffb359  bl       0x821b6da0
+821bba4c: 7fc4f378  mr       r4, r30
+821bba50: 4bff4811  bl       0x821b0260
+821bba54: 907c019c  stw      r3, 0x19c(r28)
+821bba58: 3d608200  lis      r11, -0x7e00
+821bba5c: 3d408201  lis      r10, -0x7dff
+821bba60: 7fe3fb78  mr       r3, r31
+821bba64: 388af3e4  addi     r4, r10, -0xc1c
+821bba68: c02b0b7c  lfs      f1, 0xb7c(r11)
+821bba6c: 4800195d  bl       0x821bd3c8
+821bba70: d03c01a0  stfs     f1, 0x1a0(r28)
+821bba74: 3d608201  lis      r11, -0x7dff
+821bba78: 7fe3fb78  mr       r3, r31
+821bba7c: 388bf3d8  addi     r4, r11, -0xc28
+821bba80: 48001749  bl       0x821bd1c8
+821bba84: 7c7e1b79  or.      r30, r3, r3
+821bba88: 4182004c  beq      0x821bbad4
+821bba8c: 7fc3f378  mr       r3, r30
+821bba90: 48001679  bl       0x821bd108
+821bba94: 7c7d1b79  or.      r29, r3, r3
+821bba98: 3be00000  li       r31, 0
+821bba9c: 40810038  ble      0x821bbad4
+821bbaa0: 7f83e378  mr       r3, r28
+821bbaa4: 4bfffe7d  bl       0x821bb920
+821bbaa8: 7c7b1b78  mr       r27, r3
+821bbaac: 7fe4fb78  mr       r4, r31
+821bbab0: 7fc3f378  mr       r3, r30
+821bbab4: 48001705  bl       0x821bd1b8
+821bbab8: 7c651b78  mr       r5, r3
+821bbabc: 7fe4fb78  mr       r4, r31
+821bbac0: 7f63db78  mr       r3, r27
+821bbac4: 480002a5  bl       0x821bbd68
+821bbac8: 3bff0001  addi     r31, r31, 1
+821bbacc: 7f1fe800  cmpw     cr6, r31, r29
+821bbad0: 4198ffd0  blt      cr6, 0x821bbaa0
+821bbad4: 38210080  addi     r1, r1, 0x80
+821bbad8: 4850576c  b        0x826c1244
+
+====================================================================================================
+L. Wall::Init(index, xml): stw r4,0x58(r3) -- the ONLY store to wall->0x58
+====================================================================================================
+821bbd68: 7d8802a6  mflr     r12
+821bbd6c: 48505489  bl       0x826c11f4
+821bbd70: dbe1ffc8  stfd     f31, -0x38(r1)
+821bbd74: 9421ff70  stwu     r1, -0x90(r1)
+821bbd78: 90830058  stw      r4, 0x58(r3)
+821bbd7c: 3d608200  lis      r11, -0x7e00
+
+====================================================================================================
+M. Round::count accessor used for the running total
+====================================================================================================
+821bbcb8: 80630000  lwz      r3, 0(r3)
+821bbcbc: 4e800020  blr      
+
+====================================================================================================
+Data tables
+====================================================================================================
+0x8200e930 walls-per-theme: [76, 67, 77, 74, 74, 64, 72, 88, 69, 69, 76, 74, 77, 72, 79, 65, 65, 70, 75, 70]
+0x8200e980 mask table    : 000103070f1f3f7f
+0x8282d950 theme names   : ['Everyday', 'Europe', 'WorkPlaces', 'Disco', 'Activities', 'Art', 'USA', 'SouthAm', 'Body', 'OtherThemes', 'Australia', 'Fantastic', 'Sport', 'Prehistory', 'Winter', 'Human', 'Extreme', 'China', 'Russia', 'SpecialLocations', 'BattleMode', 'Europe', 'Disco', 'Art', 'SouthAm', 'Australia']
+0x8200f3a0/0x8200f3ac fmt : Wave%02d | themes/%s/%s.hitwr

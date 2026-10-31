@@ -1,0 +1,24 @@
+theme             need  walls  max idx set (shipped)  max idx (intended)
+Everyday            76     76            9                   75
+Europe              67     67            9                   66
+WorkPlaces          77     77            9                   76
+Disco               74     74            9                   73
+Activities          74     74            9                   73
+Art                 64     64            9                   63
+USA                 72     72            9                   71
+SouthAm             88     88           15                   87
+Body                69     69            8                   68
+OtherThemes         69     69            8                   68
+Australia           76     76            9                   75
+Fantastic           74     74            9                   73
+Sport               77     77            9                   76
+Prehistory          72     72            9                   71
+Winter              79     79           10                   78
+Human               65     65            8                   64
+Extreme             65     65            8                   64
+China               70     70            9                   69
+Russia              75     75           12                   74
+SpecialLocations    70     70            9                   69
+
+shipped game  -> (False, 0, 1)
+with offset   -> (True, None, None)

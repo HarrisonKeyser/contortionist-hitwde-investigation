@@ -1,0 +1,6 @@
+tools/libmspack/
+tools/unlzx
+*.pe
+*.lzx
+*.bin
+waves/
