@@ -22,7 +22,7 @@ Your play history doesn't matter. Doing every wall perfectly, in solo and co-op,
 All addresses are virtual addresses in the decrypted `default.xex` image (base `0x82000000`). Full annotated listings are in [`evidence/disassembly.txt`](evidence/disassembly.txt).
 
 ### 1. Unlock site: `0x821b8c10`
-This is a virtual method (vtable slot 12) shared by all four game-mode classes (Show, Battle, Challenge and Last Man Standing). It runs for each local player when a wall is passed:
+This is a virtual method (vtable slot 12) shared by the four game-mode classes (vtables at `0x8200eca0`, `0x8200edc8`, `0x8200eeb0` and `0x8200f098`). It runs once for each local player on the team when a wall is completed:
 
 ```
 RecordWallPassed(player, currentWall->index, currentTheme)   ; 0x821b8c94

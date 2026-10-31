@@ -4,3 +4,4 @@ tools/unlzx
 *.lzx
 *.bin
 waves/
+__pycache__/
